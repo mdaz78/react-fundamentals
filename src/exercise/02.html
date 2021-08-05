@@ -12,7 +12,14 @@
 
     const element = React.createElement('div', {
       className: 'container',
-      children: 'Hello World',
+      children: [
+        React.createElement('span', {
+          children: 'Hello',
+        }),
+        React.createElement('span', {
+          children: 'World',
+        }),
+      ],
     })
 
     ReactDOM.render(element, rootElement)

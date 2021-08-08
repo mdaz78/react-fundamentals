@@ -2,9 +2,11 @@ import * as React from 'react'
 import '../box-styles.css'
 
 function Box({children, className = '', style = {}, size = '', props}) {
+  const sizeClassName = size ? `box--${size}` : ''
+
   return (
     <div
-      className={`box box--${size} ${className}`}
+      className={`box ${className} ${sizeClassName}`}
       style={{fontStyle: 'italic', ...style}}
       {...props}
     >
